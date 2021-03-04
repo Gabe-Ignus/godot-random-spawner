@@ -5,7 +5,6 @@ var cubeScene = preload("res://assets/TestCube.tscn")
 func _ready():
 	pass
 
-
 func _on_SpawnButton_button_down():
 	#spawner with random location, rotation and scale within area
 	var cube_dist_spawn = 5
@@ -26,9 +25,7 @@ func _on_SpawnButton_button_down():
 	#random colors
 	var new_color1 = Color(rand_range(0,1), rand_range(0,1), rand_range(0,1))
 	var new_color2 = Color(rand_range(0,1), rand_range(0,1), rand_range(0,1))
-	
-	#	didn't work think it's for 2D	
-	#$TestCube/TestCube.material.set_shader_param('Color1',new_color1)
-
-	#	didn't work -> Invalid get index 'material_overtide' (on base:Spatial)
-	#cube.material_overide.set_shader_param('Color1',new_color1)
+		
+	#for this not to change every cube together set in the material Inspector>Resource>Resource>Local to Scene (On)
+	cube.get_child(0).get_surface_material(0).set_shader_param("Color1",new_color1)
+	cube.get_child(0).get_surface_material(0).set_shader_param("Color2",new_color2)

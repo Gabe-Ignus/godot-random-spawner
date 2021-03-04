@@ -55,7 +55,6 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -674, -2 )
 nodes/fragment/2/node = SubResource( 1 )
 nodes/fragment/2/position = Vector2( 120, 160 )
 nodes/fragment/3/node = SubResource( 2 )
@@ -67,6 +66,7 @@ nodes/fragment/7/position = Vector2( -160, 100 )
 nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0, 3, 0, 2, 2, 6, 0, 2, 0, 7, 0, 2, 1 )
 
 [resource]
+resource_local_to_scene = true
 shader = SubResource( 5 )
 shader_param/Color1 = Color( 1, 0, 0, 1 )
 shader_param/Color2 = Color( 0, 0, 1, 1 )
